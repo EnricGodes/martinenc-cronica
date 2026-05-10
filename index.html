@@ -165,15 +165,18 @@
       <div class="flex items-center gap-2 mb-2 text-blue-martinenc text-sm font-bold">
         <i data-lucide="play-circle" class="w-4 h-4"></i> Vídeo motivacional
       </div>
-      <a href="https://youtu.be/8s6tuoiAALo" target="_blank" class="block relative aspect-video rounded overflow-hidden bg-gray-900 group">
-        <img src="https://img.youtube.com/vi/8s6tuoiAALo/hqdefault.jpg" alt="Vídeo motivacional" class="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity" />
-        <div class="absolute inset-0 flex items-center justify-center">
-          <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-            <svg class="w-7 h-7 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        </div>
-        <div class="absolute bottom-2 left-2 right-2 text-white text-xs font-semibold bg-black/50 rounded px-2 py-1 text-center">Veure a YouTube</div>
-      </a>
+      <div class="aspect-video rounded overflow-hidden">
+        <iframe
+          width="560"
+          height="315"
+          class="w-full h-full"
+          src="https://www.youtube.com/embed/8s6tuoiAALo"
+          title="Martinenc previa partit"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
     </div>
     <div>
       <div class="flex items-center gap-2 mb-2 text-blue-martinenc text-sm font-bold">
