@@ -165,16 +165,15 @@
       <div class="flex items-center gap-2 mb-2 text-blue-martinenc text-sm font-bold">
         <i data-lucide="play-circle" class="w-4 h-4"></i> Vídeo motivacional
       </div>
-      <div class="aspect-video rounded overflow-hidden bg-gray-100">
-        <iframe
-          class="w-full h-full"
-          src="https://www.youtube-nocookie.com/embed/8s6tuoiAALo?rel=0&modestbranding=1"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          loading="lazy">
-        </iframe>
-      </div>
+      <a href="https://youtu.be/8s6tuoiAALo" target="_blank" class="block relative aspect-video rounded overflow-hidden bg-gray-900 group">
+        <img src="https://img.youtube.com/vi/8s6tuoiAALo/hqdefault.jpg" alt="Vídeo motivacional" class="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity" />
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+            <svg class="w-7 h-7 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <div class="absolute bottom-2 left-2 right-2 text-white text-xs font-semibold bg-black/50 rounded px-2 py-1 text-center">Veure a YouTube</div>
+      </a>
     </div>
     <div>
       <div class="flex items-center gap-2 mb-2 text-blue-martinenc text-sm font-bold">
@@ -603,12 +602,12 @@
         </div>
         <!-- Gol 5-0: 23:00 ST = min 48 de 50 = 96% -->
         <div class="goal-marker" style="left:93%">
-          <div class="goal-dot" style="background:#e3062c"></div>
+          <div class="goal-dot"></div>
           <span class="goal-label" style="margin-top:14px">5—0</span>
         </div>
         <!-- Gol 6-0: 24:00 ST = min 49 de 50 = 98% -->
         <div class="goal-marker" style="left:98%">
-          <div class="goal-dot" style="background:#e3062c"></div>
+          <div class="goal-dot"></div>
           <span class="goal-label">6—0</span>
         </div>
       </div>
