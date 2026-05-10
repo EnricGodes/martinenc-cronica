@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FC Martinenc 6–0 Penya Esplugues · Crònica</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            blue: { martinenc: '#062e6f' },
+            red:  { martinenc: '#e3062c' },
+            yellow: { martinenc: '#ffd400' },
+          },
+          fontFamily: { sans: ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <style>
+    .article-title { font-size: clamp(32px, 5vw, 62px); line-height: 1; font-weight: 900; }
+    .score-num { font-size: clamp(48px, 9vw, 88px); font-weight: 900; }
+    .prose p { margin-bottom: 1.4rem; font-size: 1.1rem; line-height: 1.75; }
+    .prose strong { color: #062e6f; }
+    /* Lightbox */
+    #lightbox { display:none; position:fixed; inset:0; background:rgba(0,0,0,.85); z-index:1000; align-items:center; justify-content:center; }
+    #lightbox.open { display:flex; }
+    #lightbox img { max-width:90vw; max-height:90vh; border-radius:4px; }
+  </style>
+</head>
+<body class="bg-white font-sans text-gray-900 antialiased">
+
+<!-- ===== LIGHTBOX ===== -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="" />
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 flex items-center justify-between h-20">
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-3 flex-shrink-0">
+      <div class="w-10 h-10 bg-blue-martinenc rounded-full flex items-center justify-center">
+        <span class="text-yellow-martinenc font-black text-sm">FC</span>
+      </div>
+      <span class="font-black text-blue-martinenc text-lg hidden sm:block tracking-tight">FC MARTINENC</span>
+    </a>
+
+    <!-- Nav desktop -->
+    <nav class="hidden md:flex items-center gap-6 text-xs font-bold uppercase tracking-widest text-gray-700">
+      <a href="#" class="hover:text-blue-martinenc transition-colors">Club</a>
+      <a href="#" class="hover:text-blue-martinenc transition-colors">Futbol</a>
+      <a href="#" class="hover:text-blue-martinenc transition-colors">Bàsquet</a>
+      <a href="#" class="hover:text-blue-martinenc transition-colors">Hoquei</a>
+      <a href="#" class="text-red-martinenc border-b-2 border-red-martinenc pb-0.5">Futbol Sala</a>
+      <a href="#" class="hover:text-blue-martinenc transition-colors">Altres Capacitats</a>
+      <a href="#" class="hover:text-blue-martinenc transition-colors">Contacte</a>
+    </nav>
+
+    <!-- Hamburger mobile -->
+    <button id="menu-btn" class="md:hidden p-2 text-blue-martinenc" onclick="toggleMenu()">
+      <i data-lucide="menu" class="w-6 h-6"></i>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+    <nav class="flex flex-col px-4 py-3 gap-3 text-xs font-bold uppercase tracking-widest text-gray-700">
+      <a href="#">Club</a><a href="#">Futbol</a><a href="#">Bàsquet</a><a href="#">Hoquei</a>
+      <a href="#" class="text-red-martinenc">Futbol Sala</a>
+      <a href="#">Altres Capacitats</a><a href="#">Contacte</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="max-w-6xl mx-auto px-4 pt-14 pb-10">
+  <!-- Kicker -->
+  <div class="flex flex-wrap items-center gap-2 mb-5">
+    <span class="bg-red-martinenc text-white text-xs font-black uppercase tracking-widest px-3 py-1 rounded-sm">Futbol Sala · Infantil · Crònica</span>
+    <span class="bg-yellow-martinenc text-blue-martinenc text-xs font-black uppercase tracking-widest px-3 py-1 rounded-sm">Partit clau de la jornada</span>
+  </div>
+
+  <!-- Title -->
+  <h1 class="article-title text-blue-martinenc mb-4 max-w-4xl">
+    El Martinenc exhibeix caràcter i contundència davant un rival directe
+  </h1>
+  <p class="text-gray-600 text-xl max-w-3xl mb-8 leading-relaxed">
+    L'Infantil A supera la Penya Esplugues amb una actuació sòlida, una pressió molt ben executada i una segona part d'altíssima efectivitat.
+  </p>
+
+  <!-- Dades ràpides -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-4">
+    <div class="flex items-center gap-2 text-sm text-gray-600">
+      <i data-lucide="trophy" class="w-4 h-4 text-blue-martinenc flex-shrink-0"></i>
+      <span>Lliga Tercera Divisió Infantil Futbol Sala — BCN Grup 8</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm text-gray-600">
+      <i data-lucide="calendar-days" class="w-4 h-4 text-blue-martinenc flex-shrink-0"></i>
+      <span>Diumenge, 10 de maig de 2026</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm text-gray-600">
+      <i data-lucide="clock" class="w-4 h-4 text-blue-martinenc flex-shrink-0"></i>
+      <span>11:30 h</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm text-gray-600">
+      <i data-lucide="shield" class="w-4 h-4 text-blue-martinenc flex-shrink-0"></i>
+      <span>FC Martinenc Infantil A</span>
+    </div>
+    <div class="flex items-center gap-2 text-sm text-gray-600">
+      <i data-lucide="shield" class="w-4 h-4 text-red-martinenc flex-shrink-0"></i>
+      <span>Penya Esplugues AE B</span>
+    </div>
+  </div>
+
+  <!-- Rivals separats per un punt -->
+  <div class="inline-block bg-blue-martinenc/5 border border-blue-martinenc/20 rounded px-4 py-2 text-sm text-blue-martinenc font-semibold">
+    Rivals separats per només un punt a la classificació
+  </div>
+</section>
+
+<!-- ===== MARCADOR ===== -->
+<section class="bg-blue-martinenc py-10 px-4">
+  <p class="text-center text-white/60 text-xs uppercase tracking-widest mb-4 font-bold">Resultat final</p>
+  <div class="max-w-4xl mx-auto grid grid-cols-3 items-center gap-4 text-center">
+    <div>
+      <p class="text-white font-black uppercase text-sm sm:text-base md:text-xl leading-tight">FC Martinenc<br/><span class="text-xs font-normal opacity-70">Infantil A</span></p>
+    </div>
+    <div>
+      <p class="score-num text-yellow-martinenc leading-none">6<span class="text-white/50 mx-2">–</span>0</p>
+    </div>
+    <div>
+      <p class="text-white font-black uppercase text-sm sm:text-base md:text-xl leading-tight">Penya Esplugues<br/><span class="text-xs font-normal opacity-70">AE B</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== IMATGE PRINCIPAL ===== -->
+<section class="max-w-6xl mx-auto px-4 mt-10">
+  <div class="relative cursor-pointer" onclick="openLightbox('docs/foto-victoria.jpeg')">
+    <img src="docs/foto-victoria.jpeg" alt="L'Infantil A del Martinenc" class="w-full object-cover rounded max-h-[500px]" />
+    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 rounded-b">
+      <p class="text-white text-sm flex items-center gap-1">
+        <i data-lucide="camera" class="w-3 h-3"></i>
+        L'Infantil A del Martinenc va signar una victòria de gran valor davant un rival directe.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTEXT COMPETITIU ===== -->
+<section class="max-w-6xl mx-auto px-4 mt-14">
+  <h2 class="text-xs font-black uppercase tracking-widest text-red-martinenc mb-6">Context competitiu</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div class="border border-gray-200 rounded p-5">
+      <div class="flex items-center gap-2 mb-2 text-blue-martinenc">
+        <i data-lucide="trophy" class="w-5 h-5"></i>
+        <span class="font-bold text-sm">Duel directe</span>
+      </div>
+      <p class="text-sm text-gray-600">Els dos equips arribaven separats per només un punt.</p>
+    </div>
+    <div class="border border-gray-200 rounded p-5">
+      <div class="flex items-center gap-2 mb-2 text-blue-martinenc">
+        <i data-lucide="zap" class="w-5 h-5"></i>
+        <span class="font-bold text-sm">Moment competitiu</span>
+      </div>
+      <p class="text-sm text-gray-600">Tots dos conjunts venien amb una dinàmica molt positiva.</p>
+    </div>
+    <div class="border border-gray-200 rounded p-5">
+      <div class="flex items-center gap-2 mb-2 text-blue-martinenc">
+        <i data-lucide="target" class="w-5 h-5"></i>
+        <span class="font-bold text-sm">Objectiu</span>
+      </div>
+      <p class="text-sm text-gray-600">Una victòria podia deixar la lliga a un partit de decidir-se.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LA PRÈVIA ===== -->
+<section class="max-w-6xl mx-auto px-4 mt-14">
+  <h2 class="text-xs font-black uppercase tracking-widest text-red-martinenc mb-6">La prèvia</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+    <!-- Video -->
+    <div>
+      <div class="flex items-center gap-2 mb-2 text-blue-martinenc text-sm font-bold">
+        <i data-lucide="play-circle" class="w-4 h-4"></i> Vídeo motivacional
+      </div>
+      <div class="aspect-video rounded overflow-hidden">
+        <iframe class="w-full h-full" src="https://www.youtube.com/embed/8s6tuoiAALo" frameborder="0" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+    <!-- Instagram -->
+    <div>
+      <div class="flex items-center gap-2 mb-2 text-blue-martinenc text-sm font-bold">
+        <i data-lucide="camera" class="w-4 h-4"></i> Post del club
+      </div>
+      <img src="docs/instagram.jpeg" alt="Post previ al partit" class="w-full rounded cursor-pointer" onclick="openLightbox('docs/instagram.jpeg')" />
+    </div>
+  </div>
+  <p class="text-gray-600 mt-6 text-base leading-relaxed max-w-3xl">
+    La prèvia ja deixava clar que el partit tenia un component emocional i competitiu especial. El vídeo motivador preparat per David i la comunicació del club ajudaven a reforçar la sensació que l'equip estava davant d'un repte important. La resposta dels jugadors, vista després sobre la pista, va estar a l'altura d'aquesta preparació.
+  </p>
+</section>
+
+<!-- ===== ELS PROTAGONISTES ===== -->
+<section class="max-w-6xl mx-auto px-4 mt-14">
+  <h2 class="text-xs font-black uppercase tracking-widest text-red-martinenc mb-6 flex items-center gap-2">
+    <i data-lucide="users" class="w-4 h-4"></i> Els protagonistes
+  </h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+    <!-- Martinenc -->
+    <div>
+      <div class="flex items-center gap-2 mb-3 text-blue-martinenc font-bold">
+        <i data-lucide="shield" class="w-4 h-4"></i> FC Martinenc Infantil A
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-blue-martinenc text-white">
+              <th class="text-right px-3 py-2 font-bold w-12">#</th>
+              <th class="text-left px-3 py-2 font-bold">Jugador</th>
+              <th class="text-left px-3 py-2 font-bold hidden sm:table-cell">Posició</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-100 even:bg-gray-50"><td class="text-right px-3 py-2 text-gray-400 font-bold">17</td><td class="px-3 py-2">Kenzo Josep Acedo Fukuda</td><td class="px-3 py-2 hidden sm:table-cell"><span class="bg-blue-martinenc/10 text-blue-martinenc text-xs px-2 py-0.5 rounded font-semibold">Tanca</span></td></tr>
+            <tr class="border-b border-gray-100 even:bg-gray-50"><td class="text-right px-3 py-2 text-gray-400 font-bold">14</td><td class="px-3 py-2">Dylan Botí Torres</td><td class="px-3 py-2 hidden sm:table-cell"><span class="bg-red-martinenc/10 text-red-martinenc text-xs px-2 py-0.5 rounded font-semibold">Ala</span></td></tr>
+            <tr class="border-b border-gray-100 even:bg-gray-50"><td class="text-right px-3 py-2 text-gray-400 font-bold">12</td><td class="px-3 py-2">Roc Casadejust Guasch</td><td class="px-3 py-2 hidden sm:table-cell"><span class="bg-red-martinenc/10 text-red-martinenc text-xs px-2 py-0.5 rounded font-semibold">Ala</span></td></tr>
+            <tr class="border-b border-gray-100 even:bg-gray-50"><td class="text-right px-3 py-2 text-gray-400 font-bold">19</td><td class="px-3 py-2 font-bold">Christofer Leonel Espejo Garcia</td><td class="px-3 py-2 hidden sm:table-cell"><span class="bg-yellow-martinenc/30 text-yellow-800 text-xs px-2 py-0.5 rounded font-semibold">Pivot</span></td></tr>
+            <tr class="border-b border-gray-100 even:bg-gray-50"><td class="text-right px-3 py-2 text-gray-400 font-bold">11</td><td class="px-3 py-2">Joel Espuñes Saurina</td><td class="px-3 py-2 hidden sm:table-cell"><span class="bg-blue-martinenc/10 text-blue-martinenc text-xs px-2 py-0.5 rounded font-semibold">Tanca</span></td></tr>
+            <tr class="border-b border-gray-100 even:bg-gray-50"><td class="text-right px-3 py-2 text-gray-400 font-bold">26</td><td class="px-3 py-2 font-bold">Bruno Gironella</td><td class="px-3 py-2 hidden sm:table-cell"><span class="bg-yellow-martinenc/30 text-yellow-800 text-xs px-2 py-0.5 rounded font-semibold">Pivot</span></td></tr>
+            <tr class="border-b border-gray-100 even:bg-gray-50"><td class="text-right px-3 py-2 text-gray-400 font-bold">10</td><td class="px-3 py-2 font-bold">Héctor Godes Mateo</td><td class="px-3 py-2 hidden sm:table-cell"><span class="bg-red-martinenc/10 text-red-martinenc text-xs px-2 py-0.5 rounded font-semibold">Ala</span></td></tr>
+            <tr class="border-b border-gray-100 even:bg-gray-50"><td class="text-right px-3 py-2 text-gray-400 font-bold">21</td><td class="px-3 py-2">Neo Menzinger Bosch</td><td class="px-3 py-2 hidden sm:table-cell"><span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded font-semibold">Porter</span></td></tr>
+            <tr class="border-b border-gray-100 even:bg-gray-50"><td class="text-right px-3 py-2 text-gray-400 font-bold">13</td><td class="px-3 py-2">Nil Mestres Perez</td><td class="px-3 py-2 hidden sm:table-cell"><span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded font-semibold">Porter</span></td></tr>
+            <tr class="border-b border-gray-100 even:bg-gray-50"><td class="text-right px-3 py-2 text-gray-400 font-bold">8</td><td class="px-3 py-2">Marçal Parramon Aubia</td><td class="px-3 py-2 hidden sm:table-cell"><span class="bg-red-martinenc/10 text-red-martinenc text-xs px-2 py-0.5 rounded font-semibold">Ala</span></td></tr>
+            <tr class="even:bg-gray-50"><td class="text-right px-3 py-2 text-gray-400 font-bold">7</td><td class="px-3 py-2">Héctor Vila Perez</td><td class="px-3 py-2 hidden sm:table-cell"><span class="bg-red-martinenc/10 text-red-martinenc text-xs px-2 py-0.5 rounded font-semibold">Ala</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-gray-500 mt-2">Entrenador: <span class="font-semibold text-blue-martinenc">Carlos Casado</span></p>
+    </div>
+
+    <!-- Esplugues -->
+    <div>
+      <div class="flex items-center gap-2 mb-3 text-gray-600 font-bold">
+        <i data-lucide="shield" class="w-4 h-4"></i> Penya Esplugues AE B
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-600 text-white">
+              <th class="text-left px-3 py-2 font-bold">Jugador</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-100 even:bg-gray-50"><td class="px-3 py-2">Joel Amaya de la Torre</td></tr>
+            <tr class="border-b border-gray-100 even:bg-gray-50"><td class="px-3 py-2">Nil Arbués Jardí</td></tr>
+            <tr class="border-b border-gray-100 even:bg-gray-50"><td class="px-3 py-2">Aleix Cayetano Lopez</td></tr>
+            <tr class="border-b border-gray-100 even:bg-gray-50"><td class="px-3 py-2">Thiago Guida Llorente</td></tr>
+            <tr class="border-b border-gray-100 even:bg-gray-50"><td class="px-3 py-2">Lucas Luengo Bestue</td></tr>
+            <tr class="border-b border-gray-100 even:bg-gray-50"><td class="px-3 py-2">Ibo Mora Rivera</td></tr>
+            <tr class="border-b border-gray-100 even:bg-gray-50"><td class="px-3 py-2">Xavier Picazo Valderrabano</td></tr>
+            <tr class="border-b border-gray-100 even:bg-gray-50"><td class="px-3 py-2">Roc Sanjusto Patiño</td></tr>
+            <tr class="even:bg-gray-50"><td class="px-3 py-2">Hugo Serrano Menjibar</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-gray-500 mt-2">Tècnic: <span class="font-semibold">Pau Save Araño</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CRONICA ===== -->
+<section class="max-w-3xl mx-auto px-4 mt-14">
+  <h2 class="text-xs font-black uppercase tracking-widest text-red-martinenc mb-8">Crònica</h2>
+
+  <!-- Vídeos del partit -->
+  <div class="bg-gray-50 rounded p-4 mb-8 border border-gray-200">
+    <p class="text-xs font-black uppercase tracking-widest text-blue-martinenc mb-3 flex items-center gap-1">
+      <i data-lucide="play-circle" class="w-3 h-3"></i> Vídeos complets del partit
+    </p>
+    <div class="flex flex-col gap-2">
+      <a href="https://youtu.be/XCTOed1uxN4" target="_blank" class="flex items-center gap-2 text-sm text-blue-martinenc font-semibold hover:underline">
+        <i data-lucide="play-circle" class="w-4 h-4 text-red-martinenc"></i> Primera part
+      </a>
+      <a href="https://youtu.be/4duXa3NQU_U" target="_blank" class="flex items-center gap-2 text-sm text-blue-martinenc font-semibold hover:underline">
+        <i data-lucide="play-circle" class="w-4 h-4 text-red-martinenc"></i> Segona part — vídeo 1
+      </a>
+      <a href="https://youtu.be/xqWeZEMSJFA" target="_blank" class="flex items-center gap-2 text-sm text-blue-martinenc font-semibold hover:underline">
+        <i data-lucide="play-circle" class="w-4 h-4 text-red-martinenc"></i> Segona part — vídeo 2
+      </a>
+    </div>
+  </div>
+
+  <!-- Primera part -->
+  <h3 class="text-blue-martinenc font-black text-xl mb-4">Primera part</h3>
+  <div class="prose text-gray-800">
+    <p>En els primers compassos, la Penya Esplugues no va sortir amb una pressió especialment alta. El seu bloc es va situar més aviat a mitja pista, cosa que va permetre al Martinenc trenar jugades amb més comoditat de l'esperada i arribar a la porteria rival des de molt aviat. El plantejament tàctic de Carlos Casado va començar donant resultat.</p>
+    <p>Al minut <strong>5:00</strong>, en un servei de banda, Joel va deixar la pilota de taló perquè Héctor Godes, des de la frontal de l'àrea, rematés lleugerament desviat. Poc després, al <strong>6:37</strong>, Marçal va servir des de la banda dreta i Kenzo va xutar des de la línia de tres quarts, també sense trobar porteria.</p>
+    <p>Fruit d'aquesta pressió, al <strong>7:36</strong>, Christofer va robar una pilota al número 8 en ple centre del camp. Es va plantar a la frontal davant la pressió de dos defenses i el seu xut va sortir desviat per molt poc.</p>
+    <p>Al <strong>10:02</strong>, la pressió de Christofer sobre el 25 va provocar un nou contraatac. Roc Sanjusto només va poder aturar-lo amb una falta que li va costar la primera targeta groga. Kenzo va executar la falta i la pilota va marxar per sobre del travesser, per poc.</p>
+  </div>
+
+  <!-- Gol 1-0 -->
+  <div class="border-l-4 border-yellow-martinenc bg-yellow-martinenc/10 rounded-r p-4 my-6">
+    <p class="text-xs font-black uppercase tracking-widest text-blue-martinenc mb-1 flex items-center gap-1">
+      <i data-lucide="circle-dot" class="w-3 h-3"></i> Gol 1—0 · Min. 12:27
+    </p>
+    <p class="font-bold text-blue-martinenc text-lg">Bruno Gironella</p>
+    <p class="text-sm text-gray-700 mt-1">Remat d'esquena bombejat, sorprenent el porter, après d'una falta precisa servida per Kenzo.</p>
+    <a href="https://youtu.be/XCTOed1uxN4?si=KhuyQqC6-cb3Tjaa&t=376" target="_blank" class="inline-flex items-center gap-1 mt-2 text-xs font-bold text-red-martinenc hover:underline">
+      <i data-lucide="play-circle" class="w-3 h-3"></i> Veure el gol
+    </a>
+  </div>
+
+  <div class="prose text-gray-800">
+    <p>Després del gol, l'Esplugues va intentar buscar pilotes penjades a dalt. Al <strong>20:00</strong>, Héctor Godes va córrer al contraatac i, al primer toc, la va dirigir cap a porteria. El porter, molt atent, va refusar l'ocasió. La primera part va acabar amb el Martinenc per davant.</p>
+  </div>
+
+  <!-- Segona part -->
+  <h3 class="text-blue-martinenc font-black text-xl mt-10 mb-4">Segona part</h3>
+  <div class="prose text-gray-800">
+    <p>A la represa, Carlos va demanar als jugadors que continuessin pressionant i sent valents. Nil va sortir com a porter de la segona part. L'Esplugues va iniciar la represa amb un bloc molt més alt, però el Martinenc va trobar les solucions ràpidament.</p>
+    <p>Al <strong>1:00</strong>, Christofer va trepitjar la pilota cap enrere i Roc, molt elèctric, la va conduir fins a l'àrea contrària. Al <strong>1:30</strong>, una pilota llarga de Nil va trobar Christofer de cap dins l'àrea contrària.</p>
+  </div>
+
+  <!-- Gol 2-0 -->
+  <div class="border-l-4 border-yellow-martinenc bg-yellow-martinenc/10 rounded-r p-4 my-6">
+    <p class="text-xs font-black uppercase tracking-widest text-blue-martinenc mb-1 flex items-center gap-1">
+      <i data-lucide="circle-dot" class="w-3 h-3"></i> Gol 2—0 · Min. 2:30 ST
+    </p>
+    <p class="font-bold text-blue-martinenc text-lg">Christofer Leonel Espejo Garcia</p>
+    <p class="text-sm text-gray-700 mt-1">Recuperació alta, paret fulminant amb Roc i definició. Jugada rapidíssima, generosa i executada amb precisió.</p>
+    <a href="https://youtu.be/4duXa3NQU_U?si=jYh5f5nudLz8XqFO&t=148" target="_blank" class="inline-flex items-center gap-1 mt-2 text-xs font-bold text-red-martinenc hover:underline">
+      <i data-lucide="play-circle" class="w-3 h-3"></i> Veure el gol
+    </a>
+  </div>
+
+  <!-- Gol 3-0 -->
+  <div class="border-l-4 border-yellow-martinenc bg-yellow-martinenc/10 rounded-r p-4 my-6">
+    <p class="text-xs font-black uppercase tracking-widest text-blue-martinenc mb-1 flex items-center gap-1">
+      <i data-lucide="circle-dot" class="w-3 h-3"></i> Gol 3—0 · Min. 15:00 ST
+    </p>
+    <p class="font-bold text-blue-martinenc text-lg">Christofer Leonel Espejo Garcia</p>
+    <p class="text-sm text-gray-700 mt-1">Rep d'esquena des d'una falta servida per Joel, es gira i xuta entre les cames del porter.</p>
+    <a href="https://youtu.be/4duXa3NQU_U?si=EFrn2OoIJaYJhlcv&t=892" target="_blank" class="inline-flex items-center gap-1 mt-2 text-xs font-bold text-red-martinenc hover:underline">
+      <i data-lucide="play-circle" class="w-3 h-3"></i> Veure el gol
+    </a>
+  </div>
+
+  <div class="prose text-gray-800">
+    <p>Al <strong>16:30</strong>, l'Esplugues va demanar temps mort i va provar de jugar amb cinc homes. El Martinenc va saber gestionar la situació i aprofitar els espais a l'esquena dels rivals.</p>
+  </div>
+
+  <!-- Gol 4-0 -->
+  <div class="border-l-4 border-yellow-martinenc bg-yellow-martinenc/10 rounded-r p-4 my-6">
+    <p class="text-xs font-black uppercase tracking-widest text-blue-martinenc mb-1 flex items-center gap-1">
+      <i data-lucide="circle-dot" class="w-3 h-3"></i> Gol 4—0 · Min. 19:45 ST · HAT-TRICK
+    </p>
+    <p class="font-bold text-blue-martinenc text-lg">Christofer Leonel Espejo Garcia</p>
+    <p class="text-sm text-gray-700 mt-1">Pilota llarga de Nil amb joc de peus. Christofer, emulant el gol de Cruyff, envia la pilota al fons de la xarxa.</p>
+    <a href="https://youtu.be/xqWeZEMSJFA?si=Xt3I9mUFBp_Hb15e&t=160" target="_blank" class="inline-flex items-center gap-1 mt-2 text-xs font-bold text-red-martinenc hover:underline">
+      <i data-lucide="play-circle" class="w-3 h-3"></i> Veure el gol
+    </a>
+  </div>
+
+  <!-- Gol 5-0 -->
+  <div class="border-l-4 border-blue-martinenc bg-blue-martinenc/5 rounded-r p-4 my-6">
+    <p class="text-xs font-black uppercase tracking-widest text-blue-martinenc mb-1 flex items-center gap-1">
+      <i data-lucide="circle-dot" class="w-3 h-3"></i> Gol 5—0 · Min. 23:00 ST
+    </p>
+    <p class="font-bold text-blue-martinenc text-lg">Héctor Godes Mateo</p>
+    <p class="text-sm text-gray-700 mt-1">Desmarcatge central, rep la pilota de Bruno, retall amb sang freda i pilota suaument al fons.</p>
+    <a href="https://youtu.be/xqWeZEMSJFA?si=yEhOmpJr8gf3nsaU&t=364" target="_blank" class="inline-flex items-center gap-1 mt-2 text-xs font-bold text-red-martinenc hover:underline">
+      <i data-lucide="play-circle" class="w-3 h-3"></i> Veure el gol
+    </a>
+  </div>
+
+  <!-- Gol 6-0 -->
+  <div class="border-l-4 border-blue-martinenc bg-blue-martinenc/5 rounded-r p-4 my-6">
+    <p class="text-xs font-black uppercase tracking-widest text-blue-martinenc mb-1 flex items-center gap-1">
+      <i data-lucide="circle-dot" class="w-3 h-3"></i> Gol 6—0 · Min. 24:00 ST
+    </p>
+    <p class="font-bold text-blue-martinenc text-lg">Héctor Godes Mateo</p>
+    <p class="text-sm text-gray-700 mt-1">Nova acció directa. Mateixa recepta: retall, rivals descol·locats i segon gol personal.</p>
+    <a href="https://youtu.be/xqWeZEMSJFA?si=d1fd75r_BTVzE2hd&t=407" target="_blank" class="inline-flex items-center gap-1 mt-2 text-xs font-bold text-red-martinenc hover:underline">
+      <i data-lucide="play-circle" class="w-3 h-3"></i> Veure el gol
+    </a>
+  </div>
+</section>
+
+<!-- ===== LECTURA TÀCTICA ===== -->
+<section class="max-w-6xl mx-auto px-4 mt-14">
+  <h2 class="text-xs font-black uppercase tracking-widest text-red-martinenc mb-6 flex items-center gap-2">
+    <i data-lucide="activity" class="w-4 h-4"></i> Lectura tàctica
+  </h2>
+
+  <!-- Fases del partit -->
+  <div class="flex flex-col sm:flex-row gap-1 mb-8 rounded overflow-hidden">
+    <div class="flex-1 bg-blue-martinenc text-white p-4">
+      <p class="text-xs font-black uppercase tracking-widest text-yellow-martinenc mb-1">Min. 0–12</p>
+      <p class="font-bold">Domini Martinenc</p>
+    </div>
+    <div class="flex-1 bg-gray-200 text-gray-800 p-4">
+      <p class="text-xs font-black uppercase tracking-widest text-gray-500 mb-1">Min. 13–25</p>
+      <p class="font-bold">Partit més obert</p>
+    </div>
+    <div class="flex-1 bg-blue-martinenc text-white p-4">
+      <p class="text-xs font-black uppercase tracking-widest text-yellow-martinenc mb-1">Min. 26–50</p>
+      <p class="font-bold">Domini i efectivitat Martinenc</p>
+    </div>
+  </div>
+
+  <!-- Comparativa -->
+  <div class="grid grid-cols-2 gap-0 border border-gray-200 rounded overflow-hidden text-sm">
+    <div class="bg-blue-martinenc text-white px-4 py-2 font-black uppercase text-xs tracking-widest">Primera part</div>
+    <div class="bg-gray-600 text-white px-4 py-2 font-black uppercase text-xs tracking-widest">Segona part</div>
+    <div class="px-4 py-3 border-b border-gray-100">Pressió organitzada</div>
+    <div class="px-4 py-3 border-b border-gray-100 bg-gray-50">Joc directe més vertical</div>
+    <div class="px-4 py-3 border-b border-gray-100">Control inicial</div>
+    <div class="px-4 py-3 border-b border-gray-100 bg-gray-50">Major efectivitat ofensiva</div>
+    <div class="px-4 py-3 border-b border-gray-100">Gol d'estratègia</div>
+    <div class="px-4 py-3 border-b border-gray-100 bg-gray-50">Allau d'ocasions i gols</div>
+    <div class="px-4 py-3">Esplugues sense fluïdesa</div>
+    <div class="px-4 py-3 bg-gray-50">Martinenc en mode dominant</div>
+  </div>
+</section>
+
+<!-- ===== MOMENTS CLAU / GOLEJADORS ===== -->
+<section class="max-w-6xl mx-auto px-4 mt-14">
+  <h2 class="text-xs font-black uppercase tracking-widest text-red-martinenc mb-6 flex items-center gap-2">
+    <i data-lucide="zap" class="w-4 h-4"></i> Moments clau
+  </h2>
+
+  <!-- Timeline horitzontal -->
+  <div class="overflow-x-auto pb-4">
+    <div class="flex gap-3 min-w-max">
+      <div class="w-44 border border-gray-200 rounded p-3 flex-shrink-0">
+        <p class="text-yellow-700 font-black text-xs mb-1">12:27 · 1—0</p>
+        <p class="font-bold text-blue-martinenc text-sm">Bruno</p>
+        <p class="text-xs text-gray-500 mt-1">Remat d'esquena</p>
+        <a href="https://youtu.be/XCTOed1uxN4?si=KhuyQqC6-cb3Tjaa&t=376" target="_blank" class="inline-flex items-center gap-1 mt-2 text-xs font-bold text-red-martinenc hover:underline"><i data-lucide="play-circle" class="w-3 h-3"></i> Veure gol</a>
+      </div>
+      <div class="w-44 border border-gray-200 rounded p-3 flex-shrink-0">
+        <p class="text-yellow-700 font-black text-xs mb-1">2:30 ST · 2—0</p>
+        <p class="font-bold text-blue-martinenc text-sm">Christofer</p>
+        <p class="text-xs text-gray-500 mt-1">Recuperació + paret</p>
+        <a href="https://youtu.be/4duXa3NQU_U?si=jYh5f5nudLz8XqFO&t=148" target="_blank" class="inline-flex items-center gap-1 mt-2 text-xs font-bold text-red-martinenc hover:underline"><i data-lucide="play-circle" class="w-3 h-3"></i> Veure gol</a>
+      </div>
+      <div class="w-44 border border-gray-200 rounded p-3 flex-shrink-0">
+        <p class="text-yellow-700 font-black text-xs mb-1">15:00 ST · 3—0</p>
+        <p class="font-bold text-blue-martinenc text-sm">Christofer</p>
+        <p class="text-xs text-gray-500 mt-1">Gir i xut entre cames</p>
+        <a href="https://youtu.be/4duXa3NQU_U?si=EFrn2OoIJaYJhlcv&t=892" target="_blank" class="inline-flex items-center gap-1 mt-2 text-xs font-bold text-red-martinenc hover:underline"><i data-lucide="play-circle" class="w-3 h-3"></i> Veure gol</a>
+      </div>
+      <div class="w-44 border-2 border-yellow-martinenc bg-yellow-martinenc/10 rounded p-3 flex-shrink-0">
+        <p class="text-yellow-700 font-black text-xs mb-1">19:45 ST · 4—0</p>
+        <p class="font-bold text-blue-martinenc text-sm">Christofer ⭐ HAT-TRICK</p>
+        <p class="text-xs text-gray-500 mt-1">Remat acrobàtic</p>
+        <a href="https://youtu.be/xqWeZEMSJFA?si=Xt3I9mUFBp_Hb15e&t=160" target="_blank" class="inline-flex items-center gap-1 mt-2 text-xs font-bold text-red-martinenc hover:underline"><i data-lucide="play-circle" class="w-3 h-3"></i> Veure gol</a>
+      </div>
+      <div class="w-44 border border-gray-200 rounded p-3 flex-shrink-0">
+        <p class="text-yellow-700 font-black text-xs mb-1">23:00 ST · 5—0</p>
+        <p class="font-bold text-blue-martinenc text-sm">Héctor Godes</p>
+        <p class="text-xs text-gray-500 mt-1">Retall + sang freda</p>
+        <a href="https://youtu.be/xqWeZEMSJFA?si=yEhOmpJr8gf3nsaU&t=364" target="_blank" class="inline-flex items-center gap-1 mt-2 text-xs font-bold text-red-martinenc hover:underline"><i data-lucide="play-circle" class="w-3 h-3"></i> Veure gol</a>
+      </div>
+      <div class="w-44 border border-gray-200 rounded p-3 flex-shrink-0">
+        <p class="text-yellow-700 font-black text-xs mb-1">24:00 ST · 6—0</p>
+        <p class="font-bold text-blue-martinenc text-sm">Héctor Godes</p>
+        <p class="text-xs text-gray-500 mt-1">2n gol personal</p>
+        <a href="https://youtu.be/xqWeZEMSJFA?si=d1fd75r_BTVzE2hd&t=407" target="_blank" class="inline-flex items-center gap-1 mt-2 text-xs font-bold text-red-martinenc hover:underline"><i data-lucide="play-circle" class="w-3 h-3"></i> Veure gol</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Golejadors -->
+  <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+    <!-- Hat-trick Christofer -->
+    <div class="border-2 border-yellow-martinenc rounded p-5 bg-yellow-martinenc/5 sm:col-span-1">
+      <p class="text-xs font-black uppercase tracking-widest text-yellow-700 mb-1">Hat-trick</p>
+      <p class="font-black text-blue-martinenc text-lg leading-tight">Christofer<br/>Leonel Espejo</p>
+      <div class="flex gap-1 mt-3">
+        <span class="w-7 h-7 bg-yellow-martinenc rounded-full flex items-center justify-center text-blue-martinenc font-black text-xs">G</span>
+        <span class="w-7 h-7 bg-yellow-martinenc rounded-full flex items-center justify-center text-blue-martinenc font-black text-xs">G</span>
+        <span class="w-7 h-7 bg-yellow-martinenc rounded-full flex items-center justify-center text-blue-martinenc font-black text-xs">G</span>
+      </div>
+    </div>
+    <!-- Hector Godes -->
+    <div class="border border-blue-martinenc/30 rounded p-5 bg-blue-martinenc/5">
+      <p class="text-xs font-black uppercase tracking-widest text-blue-martinenc/60 mb-1">2 gols</p>
+      <p class="font-black text-blue-martinenc text-lg leading-tight">Héctor<br/>Godes Mateo</p>
+      <div class="flex gap-1 mt-3">
+        <span class="w-7 h-7 bg-blue-martinenc rounded-full flex items-center justify-center text-white font-black text-xs">G</span>
+        <span class="w-7 h-7 bg-blue-martinenc rounded-full flex items-center justify-center text-white font-black text-xs">G</span>
+      </div>
+    </div>
+    <!-- Bruno -->
+    <div class="border border-gray-200 rounded p-5">
+      <p class="text-xs font-black uppercase tracking-widest text-gray-400 mb-1">1 gol</p>
+      <p class="font-black text-blue-martinenc text-lg leading-tight">Bruno<br/>Gironella</p>
+      <div class="flex gap-1 mt-3">
+        <span class="w-7 h-7 bg-gray-300 rounded-full flex items-center justify-center text-gray-700 font-black text-xs">G</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gràfic de barres golejadors -->
+  <div class="mt-8 space-y-3">
+    <h3 class="text-xs font-black uppercase tracking-widest text-gray-400">Gols per jugador</h3>
+    <div>
+      <div class="flex items-center gap-2 mb-1"><span class="text-sm font-bold text-blue-martinenc w-40">Christofer</span><span class="text-sm font-black">3</span></div>
+      <div class="bg-gray-100 h-4 rounded-full overflow-hidden"><div class="bg-yellow-martinenc h-full rounded-full" style="width:100%"></div></div>
+    </div>
+    <div>
+      <div class="flex items-center gap-2 mb-1"><span class="text-sm font-bold text-blue-martinenc w-40">Héctor Godes</span><span class="text-sm font-black">2</span></div>
+      <div class="bg-gray-100 h-4 rounded-full overflow-hidden"><div class="bg-blue-martinenc h-full rounded-full" style="width:66%"></div></div>
+    </div>
+    <div>
+      <div class="flex items-center gap-2 mb-1"><span class="text-sm font-bold text-blue-martinenc w-40">Bruno</span><span class="text-sm font-black">1</span></div>
+      <div class="bg-gray-100 h-4 rounded-full overflow-hidden"><div class="bg-gray-400 h-full rounded-full" style="width:33%"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EL MOMENT DEL PARTIT ===== -->
+<section class="max-w-6xl mx-auto px-4 mt-14">
+  <div class="bg-blue-martinenc rounded p-8 text-white">
+    <p class="text-yellow-martinenc text-xs font-black uppercase tracking-widest mb-3 flex items-center gap-1">
+      <i data-lucide="zap" class="w-3 h-3"></i> El moment del partit
+    </p>
+    <p class="text-yellow-martinenc font-black text-lg mb-1">2—0 · Min. 2:30 ST</p>
+    <p class="text-white/90 text-base leading-relaxed max-w-2xl mb-6">
+      Christofer pressiona, recupera, condueix i troba Roc en paral·lel. Roc no busca el lluïment individual: torna la paret al primer toc i Christofer finalitza. És una jugada que explica moltes coses del Martinenc en aquest partit: intensitat, lectura, generositat i execució.
+    </p>
+    <a href="https://youtu.be/4duXa3NQU_U?si=jYh5f5nudLz8XqFO&t=148" target="_blank" class="inline-flex items-center gap-2 bg-red-martinenc text-white font-black px-5 py-3 rounded text-sm hover:bg-red-700 transition-colors">
+      <i data-lucide="play-circle" class="w-4 h-4"></i> Veure la jugada
+    </a>
+  </div>
+</section>
+
+<!-- ===== FOTOGRAFIES ===== -->
+<section class="max-w-6xl mx-auto px-4 mt-14">
+  <h2 class="text-xs font-black uppercase tracking-widest text-red-martinenc mb-6 flex items-center gap-2">
+    <i data-lucide="camera" class="w-4 h-4"></i> Fotografies
+  </h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <div class="cursor-pointer group" onclick="openLightbox('docs/foto-victoria.jpeg')">
+      <div class="overflow-hidden rounded">
+        <img src="docs/foto-victoria.jpeg" alt="Victòria" class="w-full object-cover h-48 group-hover:scale-105 transition-transform duration-300" />
+      </div>
+      <p class="text-xs text-gray-500 mt-2">L'Infantil A va signar una de les actuacions més completes de la temporada.</p>
+    </div>
+    <div class="cursor-pointer group" onclick="openLightbox('docs/foto_presentacio.JPG')">
+      <div class="overflow-hidden rounded">
+        <img src="docs/foto_presentacio.JPG" alt="Presentació" class="w-full object-cover h-48 group-hover:scale-105 transition-transform duration-300" />
+      </div>
+      <p class="text-xs text-gray-500 mt-2">El Martinenc va combinar pressió, joc directe i efectivitat.</p>
+    </div>
+    <div class="cursor-pointer group" onclick="openLightbox('docs/instagram.jpeg')">
+      <div class="overflow-hidden rounded">
+        <img src="docs/instagram.jpeg" alt="Prèvia" class="w-full object-cover h-48 group-hover:scale-105 transition-transform duration-300" />
+      </div>
+      <p class="text-xs text-gray-500 mt-2">La prèvia del partit ja apuntava la importància del duel.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FITXA TÈCNICA ===== -->
+<section class="max-w-3xl mx-auto px-4 mt-14">
+  <div class="bg-gray-50 border-l-4 border-red-martinenc rounded-r p-6">
+    <h2 class="text-blue-martinenc font-black text-lg uppercase tracking-wide mb-5 flex items-center gap-2">
+      <i data-lucide="clipboard-list" class="w-5 h-5"></i> Fitxa tècnica
+    </h2>
+
+    <table class="w-full text-sm mb-6">
+      <tbody>
+        <tr class="border-b border-gray-200"><td class="py-2 text-gray-500 w-36">Competició</td><td class="py-2 font-semibold">Lliga Tercera Divisió Infantil Futbol Sala — BCN Grup 8</td></tr>
+        <tr class="border-b border-gray-200"><td class="py-2 text-gray-500">Data</td><td class="py-2 font-semibold">Diumenge, 10 de maig de 2026</td></tr>
+        <tr class="border-b border-gray-200"><td class="py-2 text-gray-500">Hora</td><td class="py-2 font-semibold">11:30 h</td></tr>
+        <tr class="border-b border-gray-200"><td class="py-2 text-gray-500">Local</td><td class="py-2 font-semibold">FC Martinenc Infantil A</td></tr>
+        <tr class="border-b border-gray-200"><td class="py-2 text-gray-500">Visitant</td><td class="py-2 font-semibold">Penya Esplugues AE B</td></tr>
+        <tr><td class="py-2 text-gray-500">Resultat</td><td class="py-2 font-black text-blue-martinenc text-base">FC Martinenc 6 — 0 Penya Esplugues AE B</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="text-blue-martinenc font-bold text-sm uppercase tracking-wide mb-2">Gols</h3>
+    <table class="w-full text-sm mb-6">
+      <tbody>
+        <tr class="border-b border-gray-200"><td class="py-1.5 font-bold w-16">1—0</td><td class="py-1.5">Bruno Gironella</td><td class="py-1.5 text-gray-500 text-right">12:27</td></tr>
+        <tr class="border-b border-gray-200"><td class="py-1.5 font-bold">2—0</td><td class="py-1.5">Christofer Leonel Espejo Garcia</td><td class="py-1.5 text-gray-500 text-right">2:30 ST</td></tr>
+        <tr class="border-b border-gray-200"><td class="py-1.5 font-bold">3—0</td><td class="py-1.5">Christofer Leonel Espejo Garcia</td><td class="py-1.5 text-gray-500 text-right">15:00 ST</td></tr>
+        <tr class="border-b border-gray-200"><td class="py-1.5 font-bold">4—0</td><td class="py-1.5">Christofer Leonel Espejo Garcia</td><td class="py-1.5 text-gray-500 text-right">19:45 ST</td></tr>
+        <tr class="border-b border-gray-200"><td class="py-1.5 font-bold">5—0</td><td class="py-1.5">Héctor Godes Mateo</td><td class="py-1.5 text-gray-500 text-right">23:00 ST</td></tr>
+        <tr><td class="py-1.5 font-bold">6—0</td><td class="py-1.5">Héctor Godes Mateo</td><td class="py-1.5 text-gray-500 text-right">24:00 ST</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="text-blue-martinenc font-bold text-sm uppercase tracking-wide mb-2">Targetes</h3>
+    <table class="w-full text-sm">
+      <tbody>
+        <tr class="border-b border-gray-200">
+          <td class="py-1.5"><span class="inline-block w-3 h-4 bg-yellow-400 rounded-sm mr-2"></span>Roc Sanjusto</td>
+          <td class="py-1.5 text-gray-500">Penya Esplugues AE B</td>
+        </tr>
+        <tr>
+          <td class="py-1.5"><span class="inline-block w-3 h-4 bg-yellow-400 rounded-sm mr-2"></span>Joel Amaya</td>
+          <td class="py-1.5 text-gray-500">Penya Esplugues AE B</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== TANCAMENT ===== -->
+<section class="mt-16 bg-blue-martinenc py-16 px-4 text-center">
+  <p class="text-white/60 text-sm font-bold uppercase tracking-widest mb-4">Victòria de prestigi davant un rival directe</p>
+  <p class="text-white text-2xl font-black max-w-2xl mx-auto mb-6 leading-snug">
+    La porteria a zero, el hat-trick de Christofer, els dos gols d'Héctor Godes i la lectura col·lectiva del partit deixen una conclusió clara: l'equip arriba al tram final amb confiança, recursos i caràcter.
+  </p>
+  <p class="font-black text-white" style="font-size:clamp(40px,8vw,80px); line-height:1">
+    <span class="text-yellow-martinenc">#</span>SomMartinenc
+  </p>
+  <a href="#cronica-videos" class="inline-flex items-center gap-2 mt-8 bg-red-martinenc text-white font-black px-6 py-3 rounded text-sm hover:bg-red-700 transition-colors">
+    <i data-lucide="play-circle" class="w-4 h-4"></i> Veure tots els gols
+  </a>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-gray-900 text-gray-400 text-xs py-6 px-4 text-center">
+  <p>© 2026 FC Martinenc · Tots els drets reservats</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+
+  function toggleMenu() {
+    const m = document.getElementById('mobile-menu');
+    m.classList.toggle('hidden');
+  }
+
+  function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+  }
+</script>
+</body>
+</html>
